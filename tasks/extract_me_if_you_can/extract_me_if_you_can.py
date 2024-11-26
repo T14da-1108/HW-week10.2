@@ -34,4 +34,4 @@ def parse_number(text: str) -> tuple[str, ...]:
     match = re.search(phone_pattern, text)
     if match:
         return match.groups()
-    return None
+    return ()
