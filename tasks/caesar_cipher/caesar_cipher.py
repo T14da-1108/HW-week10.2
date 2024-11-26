@@ -21,4 +21,3 @@ def caesar_encrypt(text: str, key: int) -> str:
 
     # Return the encrypted text using the translation table
     return text.translate(translation_table)
-
