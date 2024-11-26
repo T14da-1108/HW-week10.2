@@ -23,7 +23,7 @@ def has_vowel(text: str) -> bool:
     return bool(re.search(r'[aeiouAEIOU]', text))
 
 
-def parse_number(text: str) -> tuple[str, ...]:
+def parse_number(text: str) -> tuple[str, ...] | None:
     """
     Parses a phone number in the format {area code}-{local exchange}-{line number} from the text.
 
@@ -34,4 +34,4 @@ def parse_number(text: str) -> tuple[str, ...]:
     match = re.search(phone_pattern, text)
     if match:
         return match.groups()
-    return ()
+    return None
